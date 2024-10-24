@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-key */
+
 import { MovieContext } from "../context";
 import { useContext } from "react";
 import Delete from '../assets/delete.svg'
@@ -37,7 +37,7 @@ export default function CartDetails({ onClose }) {
                         <img
                           className="rounded overflow-hidden"
                           src={getImgUrl(item.cover)}
-                          alt=""
+                          alt="cover"
                           width={"50px"}
                           height={"50px"}
                         />
