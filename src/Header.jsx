@@ -4,9 +4,12 @@ import Moon from "./assets/icons/moon.svg";
 import ShoppingCart from "./assets/shopping-cart.svg";
 import {useState} from 'react';
 import CartDetails from "./cine/CartDetails";
+import {useContext} from 'react'
+import { MovieContext } from "./context";
 
 export default function Header() {
-	const [showCart, setShowCart] = useState(false)
+	const [showCart, setShowCart] = useState(false);
+	const {cartData} = useContext(MovieContext);
 
 	function handleCartClick(){
 		setShowCart(true);
@@ -47,6 +50,9 @@ export default function Header() {
                 height="24"
                 alt="Shopping Cart"
               />
+			  {
+				cartData.length > 0 && <span className='rounded-full absolute top-[-12px] left-[28px] bg-[#12CF6F]  text-white text-center p-[2px] w-[30px] h-[30px]'>{cartData.length}</span>
+			  }
             </a>
           </li>
         </ul>
