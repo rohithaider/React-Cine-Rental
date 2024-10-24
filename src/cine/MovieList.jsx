@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import { getAllMovies } from "../data/movies";
 import MovieCard from "./MovieCard";
 
